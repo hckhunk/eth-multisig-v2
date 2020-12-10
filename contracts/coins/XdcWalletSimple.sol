@@ -159,7 +159,7 @@ contract XdcWalletSimple {
       bytes signature
   ) public onlySigner {
     // Verify the other signer
-    var operationHash = keccak256("XDC-XRC20", toAddress, value, tokenContractAddress, expireTime, sequenceId);
+    var operationHash = keccak256("XDC-ERC20", toAddress, value, tokenContractAddress, expireTime, sequenceId);
     
     verifyMultiSig(toAddress, operationHash, signature, expireTime, sequenceId);
     
