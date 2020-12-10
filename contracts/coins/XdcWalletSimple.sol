@@ -127,7 +127,7 @@ contract XdcWalletSimple {
       bytes signature
   ) public onlySigner {
     // Verify the other signer
-    var operationHash = keccak256("ETC", toAddress, value, data, expireTime, sequenceId);
+    var operationHash = keccak256("XDC", toAddress, value, data, expireTime, sequenceId);
     
     var otherSigner = verifyMultiSig(toAddress, operationHash, signature, expireTime, sequenceId);
 
@@ -159,7 +159,7 @@ contract XdcWalletSimple {
       bytes signature
   ) public onlySigner {
     // Verify the other signer
-    var operationHash = keccak256("ETC-ERC20", toAddress, value, tokenContractAddress, expireTime, sequenceId);
+    var operationHash = keccak256("XDC-XRC20", toAddress, value, tokenContractAddress, expireTime, sequenceId);
     
     verifyMultiSig(toAddress, operationHash, signature, expireTime, sequenceId);
     
