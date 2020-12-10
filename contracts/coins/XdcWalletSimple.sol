@@ -27,7 +27,7 @@ import "../ERC20Interface.sol";
  *
  *
  */
-contract EtcWalletSimple {
+contract XdcWalletSimple {
   // Events
   event Deposited(address from, uint value, bytes data);
   event SafeModeActivated(address msgSender);
@@ -56,7 +56,7 @@ contract EtcWalletSimple {
    *
    * @param allowedSigners An array of signers on the wallet
    */
-  function EtcWalletSimple(address[] allowedSigners) public {
+  function XdcWalletSimple(address[] allowedSigners) public {
     if (allowedSigners.length != 3) {
       // Invalid number of signers
       revert();
