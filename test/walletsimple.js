@@ -14,6 +14,8 @@ const EthWalletSimple = artifacts.require('./WalletSimple.sol');
 const RskWalletSimple = artifacts.require('./RskWalletSimple.sol');
 const EtcWalletSimple = artifacts.require('./EtcWalletSimple.sol');
 const CeloWalletSimple = artifacts.require('./CeloWalletSimple.sol');
+const XdcWalletSimple = artifacts.require('./XdcWalletSimple.sol');    //Support for XinFin[XDC] Network
+
 const Forwarder = artifacts.require('./Forwarder.sol');
 const FixedSupplyToken = artifacts.require('./FixedSupplyToken.sol');
 
@@ -51,6 +53,12 @@ const coins = [
     nativePrefix: 'CELO',
     tokenPrefix: 'CELO-ERC20',
     WalletSimple: CeloWalletSimple,
+  },
+  {
+    name: 'Xdc',
+    nativePrefix: 'XDC',
+    tokenPrefix: 'XDC-ERC20',
+    WalletSimple: XdcWalletSimple,
   },
 ];
 
